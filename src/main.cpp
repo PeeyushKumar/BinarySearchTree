@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdio>
 
 using namespace std;
 
@@ -30,12 +31,12 @@ public:
 
     void traverse_subtree(node * ptr)
     {
-        if ( ptr == NULL ) //black
+        if ( ptr == NULL )
             return;
         
-        traverse_subtree(ptr->left); //red
-        cout << ptr->data << " ";  //green
-        traverse_subtree(ptr->right);  //blue
+        traverse_subtree(ptr->left); 
+        cout << ptr->data << " ";  
+        traverse_subtree(ptr->right);  
     }
 
     string search(int data)
@@ -106,7 +107,7 @@ int main()
 {
     Tree mytree(10);
 
-    int x[] = {4,5,8,6,2,4,3,54,6};
+    int x[] = {2,3,4,5,6,3,65,76,89};
 
     for (int i=0; i<9; i++)
     {
@@ -115,7 +116,7 @@ int main()
 
     mytree.traverse();  
 
-    cout<<mytree.search(6)<<endl;  
+    cout<<mytree.search(89)<<endl;  
 
     return 0;
 }
